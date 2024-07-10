@@ -1,0 +1,22 @@
+.card {
+    border-radius: 0;
+    box-shadow: 4px 4px 1px rgba(198, 204, 224, 1);
+}
+
+.card.card-margin {
+    margin-left: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #a7b1ba;
+}
+
+.card-subtitle {
+    color: #9572e6 !important;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}

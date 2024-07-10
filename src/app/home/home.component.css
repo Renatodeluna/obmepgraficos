@@ -1,0 +1,6 @@
+.wrap-card-min > * {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}

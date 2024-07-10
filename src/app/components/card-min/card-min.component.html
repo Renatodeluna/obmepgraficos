@@ -1,0 +1,51 @@
+<div class="col-sm-3">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">
+        Total de premiações:        
+      </h5>
+      <h6 class="card-subtitle mb-2 text-muted" *ngIf="premiacoes">
+        {{ premiacoes.total }}
+      </h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-3">
+  <div class="card card-margin">
+    <div class="card-body">
+      <h5 class="card-title">
+        Medalhas de ouro:
+      </h5>
+      <h6 class="card-subtitle mb-2 text-muted" *ngIf="premiacoes">
+        {{ premiacoes.ouro }}
+      </h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-3">
+  <div class="card card-margin">
+    <div class="card-body">
+      <h5 class="card-title">
+        Medalhas de prata:
+      </h5>
+      <h6 class="card-subtitle mb-2 text-muted" *ngIf="premiacoes">
+        {{ premiacoes.prata }}
+      </h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-3">
+  <div class="card card-margin">
+    <div class="card-body">
+      <h5 class="card-title">
+        Medalhas de broze:
+      </h5>
+      <h6 class="card-subtitle mb-2 text-muted" *ngIf="premiacoes">
+        {{ premiacoes.bronze }}
+      </h6>
+    </div>
+  </div>
+</div>

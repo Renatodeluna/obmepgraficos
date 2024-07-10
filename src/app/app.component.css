@@ -1,0 +1,9 @@
+.main {
+    background: #e5ecf4;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: calc(100vh - 90px);
+    height: 100%;
+}
