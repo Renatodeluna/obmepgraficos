@@ -26,6 +26,10 @@
     color: #a7b1ba;
 }
 
+.card-descricao {
+    justify-content: center;
+}
+
 .card-descricao .texto {
     display: flex;
     flex-direction: column;
@@ -35,10 +39,6 @@
     font-size: 1.5rem;
 }
 
-
-.card-form {
-    background: #9b8de4;
-}
 .form {
     width: 100%;
     color: #fff;

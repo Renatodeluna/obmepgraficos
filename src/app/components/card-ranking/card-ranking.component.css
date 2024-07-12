@@ -1,22 +1,5 @@
-.card-title {
-    color: #a7b1ba;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-}
-
 .form-label {
     color: #a7b1ba;
     font-size: 1rem;
     text-transform: uppercase;
-}
-
-.grafico {
-    /* position: relative;
-  margin: auto;
-  height: 80vh;
-  width: 80vw; */
-}
-
-.canvas-ranking {
-    /* width: 100% !important; */
 }

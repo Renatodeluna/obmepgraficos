@@ -1,6 +1,9 @@
+:host {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
 .card {
-    border-radius: 0;
-    box-shadow: 4px 4px 1px rgba(198, 204, 224, 1);
+    min-width: 200px;
 }
 
 .card.card-margin {

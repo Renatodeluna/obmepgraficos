@@ -8,6 +8,9 @@ import { ShareService } from 'src/app/services/share.service';
   styleUrls: ['./card-ranking.component.css']
 })
 export class CardRankingComponent implements OnInit {
+  labels!: any;
+  values: any[] = [{data: []}];
+  ranking!: any;
 
   constructor(
     private rankinEstados: ShareService
@@ -17,16 +20,14 @@ export class CardRankingComponent implements OnInit {
 
   ngOnInit(){
     this.getRanking();
+  }
 
+  handleChart(dataLabels: string[], dataValues: any[]) {    
     new Chart(this.elemento.nativeElement, {
       type: 'bar',
       data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov","Dec"],
-        datasets: [
-          {
-            data: [65, 64, 67, 98, 23, 30, 65, 64, 67, 98, 23, 30, 75, 23]
-          }
-        ]
+        labels: dataLabels,
+        datasets: dataValues
       },
       options: {
         maintainAspectRatio: false,
@@ -34,22 +35,26 @@ export class CardRankingComponent implements OnInit {
           legend: {
             display: false,
           }
-        }
+        },
+        responsive: true,
       }
     });
   }
 
-  temp = {};
-
   getRanking(): void {
-    // this.rankinEstados.getRankingEstados().subscribe(item => {
-    //   this.temp = item.ranking;
+    this.rankinEstados.getRankingEstados().subscribe(item => {
+      this.ranking = item.ranking;
+      this.labels = this.ranking.map((sigla: any) => sigla.estado);
+      let temp = this.ranking.map((dado: any) => (dado.total_premios));
+
+      this.values = [{
+        data: temp,
+        "borderColor": "rgb(75, 192, 192)",
+        "backgroundColor": "rgba(75, 192, 192, 0.5)"
+      }];
       
-    //   // {
-    //   //   total: item.ranking.total_premios
-    //   // }
-    //   let res = [this.temp].map(dado => dado.estado)
-    //   console.log("temp", )
-    // });
+      this.handleChart(this.labels, this.values)
+    });
+
   }
 }
