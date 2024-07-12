@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { CompararDesempenho } from '../home/models/comparar-desempenho.models';
 import { environment } from 'src/environments/environment';
 import { BuscaInstituicaoEstado } from '../home/models/busca-instituicao-estado.models';
 import { BuscaInstituicaoMunicipio } from '../home/models/busca-instituicao-municipio.models';
-
-
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +16,7 @@ export class ShareService {
   instituicaoMunicipio: string = '/buscarinstituicaomunicipio';
   listaPremiacoes: string = '/listar-total-premiacoes';
   rankingEstados: string = '/ranking-geral-estados';
+  // private rankingEstados = `${this.baseUrl}${environment.rankingEstados}`environment.rankingEstados;
   
   
   constructor(private httpClient: HttpClient) {
